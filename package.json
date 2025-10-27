@@ -1,7 +1,7 @@
 {
   "name": "cordova-sqlite-storage-dependencies",
-  "version": "2.1.2",
-  "description": "Cordova sqlite storage dependencies",
+  "version": "2.1.2-16kb",
+  "description": "Cordova sqlite storage dependencies with Android 16KB page size support",
   "main": "404.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

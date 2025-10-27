@@ -1,0 +1,30 @@
+# Android.mk Example for 16KB Page Size Support
+#
+# This is a reference/template file showing the required configuration
+# for Android 16KB page size support.
+#
+# To use this configuration, you would need to:
+# 1. Clone the android-sqlite-native-driver source repository
+# 2. Add the following linker flags to your Android.mk LOCAL_LDFLAGS
+# 3. Rebuild the native libraries
+#
+# NOTE: This file should be present in the build configuration directory
+# when rebuilding the native libraries. The actual Android.mk structure
+# depends on the specific native driver repository being used.
+
+# Example linker flags to add for 16KB page size support:
+# LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
+# LOCAL_LDFLAGS += -Wl,-z,common-page-size=16384
+
+# These flags ensure that:
+# - max-page-size=16384: Sets the maximum page size to 16KB
+# - common-page-size=16384: Sets the common page size to 16KB
+# This allows the library to work on both 4KB and 16KB page size devices
+
+# For information on rebuilding with 16KB support, see:
+# - 16KB_BUILD_INSTRUCTIONS.md (if present)
+# - Various rebuild scripts in the parent cordova-sqlite-storage repository
+
+# Build requirements:
+# - Android NDK r28 or higher
+# - APP_SUPPORT_FLEXIBLE_PAGE_SIZES := true in Application.mk
